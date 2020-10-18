@@ -1,11 +1,12 @@
 #!/bin/bash
 
-# Clean
-rm mysql/.gitkeep
-rm www/.gitkeep
+# Clean up folders
+rm -rf mysql/
+rm -rf www/
+mkdir mysql
 
-# Go to www folder
-cd www/
+# Rename .env
+cp .env.example .env
 
 # Laravel fresh install
-composer create-project --prefer-dist laravel/laravel .
+composer create-project --prefer-dist laravel/laravel www
