@@ -5,7 +5,7 @@ networks:
 
 services:
   site:
-    image: nginx:1.19.3-alpine
+    image: nginx:1.19.4-alpine
     container_name: nginx
     ports:
       - 8080:80
@@ -19,7 +19,7 @@ services:
       - laravel
 
   mysql:
-    image: mysql:5.7.31
+    image: mysql:5.7.32
     container_name: mysql
     restart: unless-stopped
     tty: true
@@ -51,7 +51,7 @@ services:
       - laravel
 
   composer:
-    image: composer:1.10.13
+    image: composer:2.0.6
     container_name: composer
     volumes:
       - ./www:/var/www/html
@@ -62,7 +62,7 @@ services:
       - laravel
 
   npm:
-    image: node:14.14.0
+    image: node:14.15.0-alpine
     container_name: npm
     volumes:
       - ./www:/var/www/html
@@ -84,7 +84,7 @@ services:
       - laravel
 
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin:5.0.2
+    image: phpmyadmin/phpmyadmin:5.0.4
     restart: always
     container_name: phpmyadmin
     depends_on:
