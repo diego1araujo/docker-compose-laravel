@@ -51,7 +51,7 @@ services:
       - laravel
 
   composer:
-    image: composer:2.0.6
+    image: composer:2.0.7
     container_name: composer
     volumes:
       - ./www:/var/www/html
@@ -62,7 +62,7 @@ services:
       - laravel
 
   npm:
-    image: node:14.15.0-alpine
+    image: node:14.15.1-alpine
     container_name: npm
     volumes:
       - ./www:/var/www/html
