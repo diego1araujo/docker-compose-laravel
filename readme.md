@@ -18,10 +18,10 @@ First add your entire Laravel project to the `www` folder, then open a terminal 
 
 Containers created and their ports (if used) are as follows:
 
-- **nginx** - `:8080`
+- **nginx** - `:80`
 - **mysql** - `:3306`
 - **php** - `:9000`
-- **phpmyadmin** - `:8081`
+- **phpmyadmin** - `:8080`
 - **npm**
 - **composer**
 - **artisan**
